@@ -1,0 +1,17 @@
+﻿@*
+    
+*@
+@{
+}
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h1>@ViewBag.Title</h1>
+        <p><h3>@ViewBag.Author</h3>  @ViewBag.PostTime</p>
+        <br /><br /><hr />
+        <p>@ViewBag.Content</p>
+        @Html.ActionLink("Back", "BlogWall")
+    </body>
+    </html>

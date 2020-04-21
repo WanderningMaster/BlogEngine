@@ -1,0 +1,35 @@
+﻿@model IEnumerable<BlogEngine.Models.Post>
+@{
+
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <table cellpadding="6">
+        <tr>
+            <td>Id</td>
+            <td>Title</td>
+            <td>Author</td>
+            <td>Publish time</td>
+            <td></td>
+        </tr>
+        @foreach (var post in Model)
+        {
+            @if (post.UserName.ToString() == ViewBag.Username)
+            {
+                <tr>
+                    <td>#@post.Id</td>
+                    <td>@post.Title</td>
+                    <td>@post.UserName</td>
+                    <td>@post.PostTime</td>
+                    <td><a href="~/Home/Delete/@post.Id">Delete</a></td>
+                </tr>
+            }
+        }
+    </table>
+</body>
+</html>

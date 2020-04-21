@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <form action="~/Home/Index" method="post">
+            <p>
+                <label>Login: </label>
+                <input type="text" name="Login" value="" />
+            </p>
+            <p>
+                <label>Password: </label>
+                <input type="password" name="Password" value="" />
+            </p>
+            <p><input type="submit" name="Submit" value="Submit" /></p>
+        </form>
+        <br />
+        @Html.ActionLink("Registration", "Register")
+    </body>
+    </html>

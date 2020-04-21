@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <form action="~/Home/Add" method="post">
+            <p>Title: <input type="text" name="Title" value="" required /></p>
+            Content: <textarea name="Content" required></textarea>
+            <input type="submit" name="Submit" value="Submit" />
+            <br />
+        </form>
+        @Html.ActionLink("Back", "BlogsPage")
+    </div>
+</body>
+</html>
